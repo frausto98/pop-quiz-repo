@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <!-- we want an intial page on start up with two buttons & a timer with 0 -->
     <!-- buttons are view high score and Start Quiz -->
 <!-- when clicking on the start quiz button you are then directed to another webpage-->
@@ -12,44 +11,26 @@
     <!-- scores and intitials are input, and can view older scores -->
     <!-- can also clear scores -->
 <!-- You can then go back to main page -->
-
-
-
-
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Pop Quiz</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="./assets/css/style.css">
-  </head> 
-
-
-  <!-- <header>
-    <nav>
-        
-    </nav>
-  </header> -->
-
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PopQuiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
   <body>
-<div class = "toprightcorner">
-        <aside id="topRigCor">
-            <p>Timer: 0</p>
-        </aside>
-    </div>
-    <div class = "topleftcorner">
-        <aside id="topLefCor">
-            <a href="./assets/html/highscore.html">View High Scores</a>
-        </aside>
-    </div>
-    <h1>Welcome!</h1>
-    <h2>Click Start Quiz!</h2>
-    <a href="./assets/html/popquiz.html">
-        <button class = "button">
-            <text>Start Quiz</text>
-        </button>
-    </a>
-  </body>
-  
+    <header>
+        <p id="timer">time: 0</p>
+    </header>
+
+    <main>
+        <div id="first">
+            <button id="click">Start Quiz</button>
+        </div>
+        <div id="container" class="hide"></div>
+    </main>
+
+    <script src="./assets/java/script.js"></script>
+</body>
 </html>
