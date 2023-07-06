@@ -1,18 +1,18 @@
 # pop-quiz-repo
-This repo will house coding for the pop quiz challenge.
 
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peerss;
+## Description
+This is a pop quiz! 5 easy questions that you have to answer within a certain amount of time! Afterwards, you can implement your score, display others, and clear the list! Test your knowledge, and compare scores.
 
-GIVEN I am taking a code quiz
-WHEN I click the start button
-THEN a timer starts and I am presented with a question
-WHEN I answer a question
-THEN I am presented with another question
-WHEN I answer a question incorrectly
-THEN time is subtracted from the clock
-WHEN all questions are answered or the timer reaches 0
-THEN the game is over
-WHEN the game is over
-THEN I can save my initials and score
+## Installation
+N/A
+
+## Usage
+Simply follow the buttons/prompts to progress through the quiz.
+Follow the link to the github pages to be able to play:
+frausto98.github.io/pop-quiz-repo
+
+## Credits
+N/A
+
+## License
+Refer to License in the Repo
