@@ -1,3 +1,30 @@
 .hide{
     display: none;
 }
+/* below was an attempt at finally styling the page, however, the details below overwritten the above "style" when it would attempt to hide the "page" */
+
+
+/* header {
+    display: flex;
+    flex-direction: row-reverse;
+}
+#first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+#first h1{
+    align-self: center;
+    order: 1;
+}
+#click {
+    order: 2;
+    width: fit-content;
+    align-self: center;
+}
+#highScoreButton {
+    order: 2;
+    width: fit-content;
+    align-self: center;
+} */

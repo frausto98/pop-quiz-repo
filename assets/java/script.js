@@ -42,7 +42,7 @@ var firstContainer = document.getElementById('first')
 var container = document.getElementById('container')
 var summaryPage = document.getElementById('summaryPage')
 var scorePage = document.getElementById('highscores')
-var listedScores = document.getElementById('listedScores')
+var listedScores = document.getElementById('listScores')
 var li = document.createElement('li')
 var questionIndex = 0;
 var scoreIndex = 0;
@@ -94,13 +94,6 @@ function displayQuestions() {
     container.append(h1El)
 
     // then have a button to move to the next name
-    // var nextBtn =  document.createElement('button')
-    // nextBtn.textContent = 'Next'
-
-    // nextBtn.addEventListener('click', nextItem)
-
-    // container.append(nextBtn)
-
     for (var i = 0; i < questions[questionIndex].answers.length; i++) {
         var nextBtn = document.createElement('button')
         nextBtn.textContent = questions[questionIndex].answers[i]
@@ -170,18 +163,20 @@ div.append(label, input, button);
 summaryPage.append(h1El, timeScore, div)
 
 }
-
+//this function is meant to save the scores
 function saveFiles() {
     var input = document.getElementById('input')
     var userScore = { 
         userInit: input.value,
         highScore: timerStart,
     }
+//here, the user's input, initials, and the highscore, time, is put into an object
 highScoreArray.push(userScore)
 localStorage.setItem("userInfo", JSON.stringify(highScoreArray))
 showScores()
+//the object is stingified
 }
-
+//this function is meant to display high scores and buttona
 function showScores(){
     scorePage.innerHTML = '';
     firstContainer.setAttribute('class', 'hide')
@@ -190,6 +185,8 @@ function showScores(){
     scorePage.classList.remove('hide');
     var button1 = document.createElement('button');
     var button2 = document.createElement('button');
+    //above and below, the pages are being set to new attriubtes
+    // and the buttons are being assigned attributes and function
     button1.setAttribute('type', 'button');
     button1.setAttribute('id', 'startOver')
     button2.setAttribute('type', 'button')
@@ -198,7 +195,7 @@ function showScores(){
     button2.textContent = "Clear Score";
     var h1El = document.createElement('h1')
     h1El.textContent = "High Scores: "
-
+    //the buttons are appended to the page
     scorePage.append(button1, button2, h1El);
     button1.addEventListener('click', begin)
     button2.addEventListener('click', clearScores)
@@ -208,8 +205,8 @@ function showScores(){
         li;
         li.textContent = listed
 
-        scorePage.append(li)
-        
+        listedScores.append(li)
+    //here, as the scores were saved in the previous container, they;re pulled up and displayed in the list
         
         
     //scoreboard w "start over" & "clear score"
@@ -222,8 +219,6 @@ function showScores(){
 
 function clearScores () {
     localStorage.clear();
-    remove = document.removeChild(li);
-    remove
 }
 
 startBtn.addEventListener('click', begin)
