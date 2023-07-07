@@ -55,7 +55,7 @@ var highScoreArray =  JSON.parse(localStorage.getItem("userInfo")) || []
 function begin() {
     // hide the container with the button
     questionIndex = 0;
-    timerStart = 20;
+    timerStart = 25;
     timeText.classList.remove('hide');
     container.classList.remove('hide');
 
@@ -109,15 +109,16 @@ function displayQuestions() {
 
 function nextItem() {
     //checks answers
-    // var answer1 = questions[0].answers[2]
-    // var answer2 = questions[1].answers[2] 
-    // var answer3 = questions[2].answers[1]
-    // var answer4 = questions[3].answers[3]
-    // var answer5 = questions[4].answers[2]
+    //an attempt was made :\
+    var answer1 = questions[0].answers[2]
+    var answer2 = questions[1].answers[2] 
+    var answer3 = questions[2].answers[1]
+    var answer4 = questions[3].answers[3]
+    var answer5 = questions[4].answers[2]
 
-    // if (answer1 !== questions[0].trueAnswer) {
-    //     timerStart -2;
-    // }
+    if (answer1 !== questions[0].trueAnswer) {
+        timerStart -= 3;
+    }
     //if right, display correct
     //if wrong, remove time, and display wrong
     
