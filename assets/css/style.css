@@ -1,6 +1,4 @@
-.hide{
-    display: none;
-}
+
 /* below was an attempt at finally styling the page, however, the details below overwritten the above "style" when it would attempt to hide the "page" */
 
 
@@ -28,3 +26,6 @@
     width: fit-content;
     align-self: center;
 } */
+.hide{
+    display: none;
+}

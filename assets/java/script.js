@@ -43,13 +43,13 @@ var container = document.getElementById('container')
 var summaryPage = document.getElementById('summaryPage')
 var scorePage = document.getElementById('highscores')
 var listedScores = document.getElementById('listScores')
-var li = document.createElement('li')
+
 var questionIndex = 0;
 var scoreIndex = 0;
 var timerStart = 20;
 var timeText = document.getElementById('timer')
 var clearTime;
-var highScoreArray =  JSON.parse(localStorage.getItem('userInfo')) || []
+var highScoreArray =  JSON.parse(localStorage.getItem("userInfo")) || []
 
 
 function begin() {
@@ -58,6 +58,8 @@ function begin() {
     timerStart = 20;
     timeText.classList.remove('hide');
     container.classList.remove('hide');
+
+
     firstContainer.setAttribute('class', 'hide')
     summaryPage.setAttribute('class', 'hide')
     scorePage.setAttribute('class', 'hide')
@@ -107,6 +109,15 @@ function displayQuestions() {
 
 function nextItem() {
     //checks answers
+    // var answer1 = questions[0].answers[2]
+    // var answer2 = questions[1].answers[2] 
+    // var answer3 = questions[2].answers[1]
+    // var answer4 = questions[3].answers[3]
+    // var answer5 = questions[4].answers[2]
+
+    // if (answer1 !== questions[0].trueAnswer) {
+    //     timerStart -2;
+    // }
     //if right, display correct
     //if wrong, remove time, and display wrong
     
@@ -178,7 +189,7 @@ showScores()
 }
 //this function is meant to display high scores and buttona
 function showScores(){
-    scorePage.innerHTML = '';
+    // scorePage.innerHTML = '';
     firstContainer.setAttribute('class', 'hide')
     summaryPage.setAttribute('class', 'hide');
     timeText.setAttribute('class', 'hide');
@@ -201,11 +212,17 @@ function showScores(){
     button2.addEventListener('click', clearScores)
 
     for (var i = 0; i < highScoreArray.length; i++) {
-        var listed = highScoreArray;
-        li;
-        li.textContent = listed
+        // console.log(highScoreArray);
+        var li = document.createElement('li')
+        var text = `${highScoreArray[i].userInit} : ${highScoreArray[i].highScore}`;
+        console.log(li)
+        li.appendChild(document.createTextNode(text));
 
-        listedScores.append(li)
+        // `string text ${expression} string text`
+
+        // console.log(`user initials: ${highScoreArray[i].userInit}`);
+        // console.log(`user score: ${highScoreArray[i].highScore}`);
+        listedScores.appendChild(li);
     //here, as the scores were saved in the previous container, they;re pulled up and displayed in the list
         
         
