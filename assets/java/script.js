@@ -218,10 +218,6 @@ function showScores(){
         console.log(li)
         li.appendChild(document.createTextNode(text));
 
-        // `string text ${expression} string text`
-
-        // console.log(`user initials: ${highScoreArray[i].userInit}`);
-        // console.log(`user score: ${highScoreArray[i].highScore}`);
         listedScores.appendChild(li);
     //here, as the scores were saved in the previous container, they;re pulled up and displayed in the list
         

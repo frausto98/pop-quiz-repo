@@ -2,7 +2,7 @@
 /* below was an attempt at finally styling the page, however, the details below overwritten the above "style" when it would attempt to hide the "page" */
 
 
-/* header {
+header {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -25,7 +25,7 @@
     order: 2;
     width: fit-content;
     align-self: center;
-} */
+} 
 .hide{
     display: none;
 }
